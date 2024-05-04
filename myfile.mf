@@ -1,2 +1,2 @@
-Main-Class: Main
+Console.Main-Class: Console.Main
 
