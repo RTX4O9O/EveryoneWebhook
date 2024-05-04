@@ -39,7 +39,7 @@ public class Main {
                     sendMessage("@everyone");
                 }
             }
-        }, 0, 500); // 每秒兩次，間隔為 500 毫秒
+        }, 0, 500);
     }
 
     private static void sendMessage(String content) {

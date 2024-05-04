@@ -86,12 +86,11 @@ public class Window extends JFrame implements ActionListener {
                     }
                 }
             }
-        }, 0, 500); // 每秒兩次，間隔為 500 毫秒
+        }, 0, 500);
     }
     void sendMessage(String message) throws InterruptedException {
         OkHttpClient client = new OkHttpClient();
 
-        // 构建消息体
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create(mediaType, "{\"content\":\"" + "@everyone" + "\"}");
 
@@ -103,7 +102,6 @@ public class Window extends JFrame implements ActionListener {
         while (tagging) {
             try {
                 Response response = client.newCall(request).execute();
-//                System.out.println(response.body().string()); // 打印响应内容
             } catch (IOException e) {
                 e.printStackTrace();
             }
