@@ -94,7 +94,6 @@ public class Window extends JFrame implements ActionListener {
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create(mediaType, "{\"content\":\"" + "@everyone" + "\"}");
 
-        // 构建请求
         Request request = new Request.Builder()
                 .url(webhook)
                 .post(body)
